@@ -45,8 +45,9 @@ enum KphBossInfo
     ARAXXOR("Araxxor",ItemID.NID,1,-1,0,"Your Araxxor kill count is:"),
     ROYAL_TITANS("Royal Titans",ItemID.BRAN,1,-1,0,"Your Royal Titans kill count is:"),
     YAMA("Yama",ItemID.YAMI,1,-1,0,"Your Yama success count is:"),
-    SHELLBANE_GRYPHON("Shellbane gryphon",ItemID.GULLIVER,1,-1,0,"Your shellbane gryphon kill count is:"),
-
+    SHELLBANE_GRYPHON("Shellbane Gryphon",ItemID.GULLIVER,1,-1,0,"Your Shellbane Gryphon kill count is:"),
+    MAGGOT_KING("Maggot King", ItemID.MAGGOT_MARQUESS, 1, -1, 0, "Your Maggot King kill count is:"),
+    BRUTUS("Brutus", ItemID.BEEF, 1, -1, 0, "Your Brutus kill count is:"),
 
 
     DUKE_SUCELLUS("Duke Sucellus",ItemID.BARON,1,-1,0,"Your Duke Sucellus kill count is:"),
@@ -192,18 +193,6 @@ enum KphBossInfo
 
     static
     {
-        bossByWordsLoot.putAll(bossByWords);
-        bossByWordsLoot.put("Thermonuclear smoke devil","Thermy");
-        bossByWordsLoot.put("Vet'ion Reborn","Vet'ion");
-        bossByWordsLoot.put("Chambers of Xeric","Chambers");
-        bossByWordsLoot.put("The Gauntlet","Gauntlet");
-        bossByWordsLoot.put("The Nightmare","Nightmare");
-        bossByWordsLoot.put("Branda the Fire Queen","Royal Titans");
-        bossByWordsLoot.put("Eldric the Ice King","Royal Titans");
-    }
-
-    static
-    {
 
         //used for boss name check as-well as when searching for a record
 
@@ -297,8 +286,31 @@ enum KphBossInfo
 
 
         bossByWords.put("hydra","Alchemical Hydra");
+
+        bossByWords.put("maggot","Maggot King");
+        bossByWords.put("Maggot king","Maggot King");
+        bossByWords.put("Maggot King","Maggot King");
+
+        bossByWords.put("Gull","Shellbane Gryphon");
+        bossByWords.put("Gryphon","Shellbane Gryphon");
+        bossByWords.put("Gulliver","Shellbane Gryphon");
+
+        bossByWords.put("Cow","Brutus");
+        bossByWords.put("Cow Boss","Brutus");
     }
 
+
+    static
+    {
+        bossByWordsLoot.putAll(bossByWords);
+        bossByWordsLoot.put("Thermonuclear smoke devil","Thermy");
+        bossByWordsLoot.put("Vet'ion Reborn","Vet'ion");
+        bossByWordsLoot.put("Chambers of Xeric","Chambers");
+        bossByWordsLoot.put("The Gauntlet","Gauntlet");
+        bossByWordsLoot.put("The Nightmare","Nightmare");
+        bossByWordsLoot.put("Branda the Fire Queen","Royal Titans");
+        bossByWordsLoot.put("Eldric the Ice King","Royal Titans");
+    }
 
 
     public String getName()
