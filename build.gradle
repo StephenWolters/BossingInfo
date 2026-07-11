@@ -23,7 +23,7 @@ dependencies {
 }
 
 group = 'com.example'
-version = '1.9.7'
+version = '1.9.9'
 sourceCompatibility = '1.8'
 
 tasks.withType(JavaCompile) {
