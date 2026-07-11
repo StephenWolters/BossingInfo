@@ -297,7 +297,6 @@ public class FileReadWriter
                 }
                 catch (IOException exception)
                 {
-                    exception.printStackTrace();
                 }
             }
         }
@@ -322,7 +321,6 @@ public class FileReadWriter
             }
             catch (IOException exception)
             {
-                exception.printStackTrace();
             }
         }
     }
@@ -348,7 +346,6 @@ public class FileReadWriter
                 }
                 catch (IOException exception)
                 {
-                    exception.printStackTrace();
                 }
             }
         }
@@ -366,7 +363,6 @@ public class FileReadWriter
         }
         catch (Exception ex)
         {
-            ex.printStackTrace();
         }
     }
 
@@ -381,7 +377,6 @@ public class FileReadWriter
         }
         catch (Exception ex)
         {
-            ex.printStackTrace();
         }
 
     }
@@ -622,7 +617,6 @@ public class FileReadWriter
         }
         catch (IOException e)
         {
-            e.printStackTrace();
         }
     }
 
@@ -811,7 +805,6 @@ public class FileReadWriter
         }
         catch (IOException e)
         {
-            e.printStackTrace();
         }
 
 

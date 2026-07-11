@@ -1114,7 +1114,7 @@ class KphPanel extends PluginPanel {
                 }
                 catch (Exception ex)
                 {
-                    ex.printStackTrace();
+
                 }
 
 
@@ -1126,13 +1126,13 @@ class KphPanel extends PluginPanel {
             }
             catch (Exception ex)
             {
-                ex.printStackTrace();
+
             }
 
         }
         catch (Exception Io)
         {
-            Io.printStackTrace();
+
 
         }
 
@@ -1456,13 +1456,13 @@ class KphPanel extends PluginPanel {
     public void discordLink()
     {
         try { Desktop.getDesktop().browse(new URI("https://discord.gg/ATXSsbbXQV")); }
-        catch (IOException | URISyntaxException e1) { e1.printStackTrace(); }
+        catch (IOException | URISyntaxException e1) { }
     }
 
     public void githubLink()
     {
         try { Desktop.getDesktop().browse(new URI("https://github.com/Mrnice98/KillsPerHour")); }
-        catch (IOException | URISyntaxException e1) { e1.printStackTrace(); }
+        catch (IOException | URISyntaxException e1) { }
     }
 
 
