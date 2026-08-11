@@ -32,8 +32,6 @@ import net.runelite.api.events.ChatMessage;
 import net.runelite.api.events.GameStateChanged;
 import net.runelite.api.events.GameTick;
 import net.runelite.api.events.HitsplatApplied;
-import net.runelite.api.widgets.Widget;
-import net.runelite.api.widgets.WidgetInfo;
 import net.runelite.client.callback.ClientThread;
 import net.runelite.client.chat.ChatCommandManager;
 import net.runelite.client.chat.ChatMessageManager;
@@ -776,7 +774,6 @@ public class KphPlugin extends Plugin
     public void bossKc()
     {
 
-
         for (KphBossInfo bossIdentifier : KphBossInfo.values())
         {
             if (message.contains(bossIdentifier.getKcIdentifier()))
@@ -803,7 +800,7 @@ public class KphPlugin extends Plugin
 
         //Special case bosses
 
-        //Daggonoth kings
+        //Dagannoth kings
         if((message.contains(rexMessage) || message.contains(primeMessage) || message.contains(supremeMessage)) && config.dksSelector() == KphConfig.DksSelector.Kings
         || (message.contains(rexMessage) && config.dksSelector() == KphConfig.DksSelector.Rex)
         || (message.contains(primeMessage) && config.dksSelector() == KphConfig.DksSelector.Prime)
@@ -825,8 +822,9 @@ public class KphPlugin extends Plugin
             noDisplayKillTimeGetter();
             sessionChecker();
             canRun = true;
+            calcKillsPerHour();
+            printCurrentKph();
         }
-
     }
 
     private void conditionalTimeClear()
@@ -1184,7 +1182,6 @@ public class KphPlugin extends Plugin
                         break;
                 }
             }
-
 
             averageKillTime = totalTime / killsThisSession;
         }
